@@ -1,0 +1,18 @@
+<xml>
+
+	<files id='haxe'>
+
+		<compilerflag value='-I${LINC_BOX2D_PATH}/linc/'/>
+		<compilerflag value='-I${LINC_BOX2D_PATH}/lib/'/>
+		<compilerflag value='-Fs'/>
+
+		<!--file name='${LINC_BOX2D_PATH}/lib/Box2D/Common/b2Math.cpp' /-->
+		<!--file name='${LINC_BOX2D_PATH}/lib/Box2D/Dynamics/b2World.cpp' /-->
+
+	</files>
+
+	<target id="haxe">
+
+	</target>
+
+</xml>
