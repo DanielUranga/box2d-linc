@@ -17,13 +17,11 @@ class Test {
 		trace(world.getGravity().x + " " + world.getGravity().y);
 		
 		// Define the ground body.
-		/*
+		
 		var groundBodyDef = B2BodyDef.create();
-		groundBodyDef.position.x = 0.0;
-		var p = groundBodyDef.position;
-		p.x = -10.0;
-		trace(p.length());
-		*/
+		groundBodyDef.position.x = -10;
+		trace(groundBodyDef.position.length());
+		
 		//groundBodyDef.position.x = 0.0;
 		//groundBodyDef.position.y = -10.0;
 		//trace("L1: " + groundBodyDef.position.length());

@@ -15,7 +15,8 @@ from Int to Int {
 @:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:keep
-@:native('::cpp::Struct<b2BodyDef>')
+@:structAccess
+@:native('b2BodyDef')
 extern class B2BodyDef {
 	var type : B2BodyType;
 	var position : B2Vec2;

@@ -4,7 +4,8 @@ package box2d.common;
 @:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:keep
-@:native('::cpp::Struct<b2Vec2>')
+@:native('b2Vec2')
+@:structAccess
 extern class B2Vec2 {
 	var x : Float;
 	var y : Float;
