@@ -10,3 +10,5 @@ extern class B2Vec2 {
 	var y : Float;
 	@:native('b2Vec2') public static function create (x : Float, y : Float) : B2Vec2;
 }
+
+class B2Math {}
