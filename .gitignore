@@ -1,2 +1,4 @@
 cpp/
 tmp/
+test/hxcpp/cpp
+test/openfl/Export
