@@ -1,7 +1,6 @@
--main Test.hx
--cpp cpp/
--cp ../
-# pick a target
+-main Test
+-cpp cpp
+-lib linc_box2d
 
 #-D mac
 -D windows
@@ -14,4 +13,4 @@
 #-D HXCPP_M32
 
 #-cmd ./cpp/Test
--cmd cpp\Test.exe
+#-cmd cpp\Test.exe

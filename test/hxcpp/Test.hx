@@ -2,6 +2,7 @@ package;
 
 import box2d.common.B2Math;
 import box2d.dynamics.B2World;
+import box2d.dynamics.B2Body;
 
 class Test {
 		
@@ -13,11 +14,22 @@ class Test {
 
 		// Construct a world object, which will hold and simulate the rigid bodies.
 		var world = B2World.create(gravity);
-/*
+		trace(world.getGravity().x + " " + world.getGravity().y);
+		
 		// Define the ground body.
-		var groundBodyDef = new B2BodyDef();
-		groundBodyDef.position.(0.0f, -10.0f);
-*/
+		/*
+		var groundBodyDef = B2BodyDef.create();
+		groundBodyDef.position.x = 0.0;
+		var p = groundBodyDef.position;
+		p.x = -10.0;
+		trace(p.length());
+		*/
+		//groundBodyDef.position.x = 0.0;
+		//groundBodyDef.position.y = -10.0;
+		//trace("L1: " + groundBodyDef.position.length());
+		//groundBodyDef.position.set(1.0, 2.0);
+		//trace("L2: " + groundBodyDef.position.length());
+		
 /*
 		// Call the body factory which allocates memory for the ground body
 		// from a pool and creates the ground box shape (also from a pool).
