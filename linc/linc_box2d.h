@@ -6,6 +6,9 @@
 #include "../lib/box2d/Dynamics/b2World.h"
 #include "../lib/box2d/Dynamics/b2WorldCallbacks.h"
 
+#include "../lib/box2d/Collision/Shapes/b2PolygonShape.h"
+#include "../lib/box2d/Collision/Shapes/b2Shape.h"
+
 #include <hxcpp.h>
 
 namespace linc {
