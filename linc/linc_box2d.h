@@ -3,6 +3,7 @@
 	
 #include "../lib/box2d/Common/b2Math.h"
 #include "../lib/box2d/Dynamics/b2Body.h"
+#include "../lib/box2d/Dynamics/b2Fixture.h"
 #include "../lib/box2d/Dynamics/b2World.h"
 #include "../lib/box2d/Dynamics/b2WorldCallbacks.h"
 
