@@ -16,4 +16,8 @@ extern class B2PolygonShape extends B2Shape {
 @:build(linc.Linc.xml('box2d', '../../../'))
 @:include('linc_box2d.h')
 @:native('::cpp::Reference<b2PolygonShape>')
-extern class B2PolygonShapeRef extends B2PolygonShape {}
+extern class B2PolygonShapeRef extends B2PolygonShape {
+	public inline function getB2ShapeReference () : Pointer<B2Shape> {
+		return cast this;
+	}
+}

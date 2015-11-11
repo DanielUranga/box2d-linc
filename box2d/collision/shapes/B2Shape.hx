@@ -6,11 +6,7 @@ import cpp.Pointer;
 @:build(linc.Linc.xml('box2d', '../../../'))
 @:include('linc_box2d.h')
 @:native('b2Shape')
-extern class B2Shape {
-	public inline function getB2ShapeReference () : Pointer<B2Shape> {
-		return Pointer.addressOf(this);
-	}
-}
+extern class B2Shape {}
 
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('box2d', '../../../'))
