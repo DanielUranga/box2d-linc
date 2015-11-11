@@ -1,12 +1,12 @@
 <xml>
 
-	<set name="BOX2D" value="${LINC_BOX2D_PATH}/lib" />
+	<set name="BOX2D" value="${LINC_BOX2D_PATH}/lib/Box2D/Box2D" />
 	<!--include name="${LINC_BOX2D_PATH}/lib/Box2D/files.xml"/-->
 
 	<files id='haxe'>
 
 		<compilerflag value='-I${LINC_BOX2D_PATH}/linc/'/>
-		<compilerflag value='-I${LINC_BOX2D_PATH}/lib/'/>
+		<compilerflag value='-I${LINC_BOX2D_PATH}/lib/Box2D/Box2D'/>
 
 	</files>
 
