@@ -18,7 +18,6 @@ extern class B2World {
 }
 
 @:build(linc.Linc.touch())
-@:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:native('::cpp::Reference<b2World>')
 extern class B2WorldRef extends B2World {}

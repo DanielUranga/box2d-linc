@@ -3,7 +3,6 @@ package box2d.common;
 import cpp.Float32;
 
 @:build(linc.Linc.touch())
-@:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:native('b2Vec2')
 @:structAccess

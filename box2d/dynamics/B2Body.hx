@@ -12,7 +12,6 @@ extern class B2BodyType {
 }
 
 @:build(linc.Linc.touch())
-@:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:native('b2BodyDef')
 @:structAccess
@@ -35,7 +34,6 @@ extern class B2BodyDef {
 }
 
 @:build(linc.Linc.touch())
-@:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:native('b2Body')
 extern class B2Body {
@@ -47,7 +45,6 @@ extern class B2Body {
 }
 
 @:build(linc.Linc.touch())
-@:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:native('::cpp::Reference<b2Body>')
 extern class B2BodyRef extends B2Body {}

@@ -5,7 +5,6 @@ import cpp.Float32;
 import cpp.Pointer;
 
 @:build(linc.Linc.touch())
-@:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:native('b2FixtureDef')
 @:structAccess
@@ -22,13 +21,11 @@ extern class B2FixtureDef {
 }
 
 @:build(linc.Linc.touch())
-@:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:native('b2Fixture')
 extern class B2Fixture {}
 
 @:build(linc.Linc.touch())
-@:build(linc.Linc.xml('box2d', '../../'))
 @:include('linc_box2d.h')
 @:native('::cpp::Reference<b2Fixture>')
 extern class B2FixtureRef extends B2Fixture {}
