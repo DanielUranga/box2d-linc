@@ -1,7 +1,7 @@
 package box2d.dynamics;
 
 import box2d.collision.shapes.B2Shape;
-import box2d.common.B2Math.B2Vec2;
+import box2d.common.math.B2Vec2;
 import cpp.Float32;
 import cpp.Pointer;
 

@@ -1,4 +1,4 @@
-package box2d.common;
+package box2d.common.math;
 
 import cpp.Float32;
 
@@ -13,5 +13,3 @@ extern class B2Vec2 {
 	@:native('Length') public function length () : Float32;
 	@:native('Set') public function set (x : Float32, y : Float32) : Void;
 }
-
-class B2Math {}

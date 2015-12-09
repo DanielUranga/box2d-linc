@@ -2,7 +2,7 @@ package;
 
 import box2d.collision.shapes.B2PolygonShape;
 import box2d.collision.shapes.B2Shape;
-import box2d.common.B2Math;
+import box2d.common.math.B2Vec2;
 import box2d.dynamics.B2Body;
 import box2d.dynamics.B2Fixture;
 import box2d.dynamics.B2World;

@@ -1,6 +1,6 @@
 package box2d.dynamics;
 
-import box2d.common.B2Math.B2Vec2;
+import box2d.common.math.B2Vec2;
 import box2d.dynamics.B2Body;
 import cpp.Float32;
 import cpp.Pointer;
