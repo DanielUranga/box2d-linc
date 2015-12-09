@@ -30,7 +30,7 @@ extern class B2BodyDef {
 	var active : Bool;
 	var gravityScale : Float32;
 	@:native('b2BodyDef') public static function create () : B2BodyDef;
-	public inline function getReference () : Pointer<B2BodyDef> return Pointer.addressOf(this);
+	public inline function getPointer () : Pointer<B2BodyDef> return Pointer.addressOf(this);
 }
 
 @:build(linc.Linc.touch())

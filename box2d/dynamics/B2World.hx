@@ -5,8 +5,10 @@ import box2d.dynamics.B2Body;
 import cpp.Float32;
 import cpp.Pointer;
 
+#if !display
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('box2d', '../../'))
+#end
 @:include('linc_box2d.h')
 @:native('b2World')
 extern class B2World {
@@ -17,7 +19,9 @@ extern class B2World {
 	@:native('Step') public function step (timeStep : Float32, velocityIterations : Int, positionIterations : Int) : Void;
 }
 
+#if !display
 @:build(linc.Linc.touch())
+#end
 @:include('linc_box2d.h')
 @:native('::cpp::Reference<b2World>')
 extern class B2WorldRef extends B2World {}
