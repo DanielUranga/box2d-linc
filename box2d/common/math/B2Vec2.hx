@@ -13,3 +13,6 @@ extern class B2Vec2 {
 	@:native('Length') public function length () : Float32;
 	@:native('Set') public function set (x : Float32, y : Float32) : Void;
 }
+
+@:native('::cpp::Reference<b2Vec2>')
+extern class B2Vec2Ref extends B2Vec2 {}

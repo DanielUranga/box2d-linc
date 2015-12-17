@@ -3,6 +3,8 @@
 	
 	<meta title="Openfl" package="com.sample.openfl" version="1.0.0" company="Company Name" />
 	<app main="Main" path="Export" file="Openfl" />
+
+	<window fps="60" />
 	
 	<source path="Source" />
 	
