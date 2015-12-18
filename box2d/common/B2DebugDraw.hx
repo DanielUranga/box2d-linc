@@ -32,7 +32,6 @@ import flash.display.Sprite;
 * Implement and register this class with a b2World to provide debug drawing of physics
 * entities in your game.
 */
-@:build(linc.Linc.touch())
 @:cppInclude('./B2DebugDrawNative.cpp')
 @:include('linc_box2d.h')
 class B2DebugDraw extends Sprite {

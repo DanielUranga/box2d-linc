@@ -11,7 +11,6 @@ extern class B2BodyType {
 	public static inline function b2_dynamicBody () : B2BodyType return untyped __cpp__('b2_dynamicBody');
 }
 
-@:build(linc.Linc.touch())
 @:include('linc_box2d.h')
 @:native('b2BodyDef')
 @:structAccess
@@ -33,7 +32,6 @@ extern class B2BodyDef {
 	inline function getPointer () : Pointer<B2BodyDef> return Pointer.addressOf(this);
 }
 
-@:build(linc.Linc.touch())
 @:include('linc_box2d.h')
 @:native('b2Body')
 extern class B2Body {
@@ -44,7 +42,6 @@ extern class B2Body {
 	@:native('GetAngle') function getAngle () : Float32;
 }
 
-@:build(linc.Linc.touch())
 @:include('linc_box2d.h')
 @:native('::cpp::Reference<b2Body>')
 extern class B2BodyRef extends B2Body {}

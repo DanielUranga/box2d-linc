@@ -22,9 +22,6 @@ extern class B2World {
 	@:native('~b2World') function delete () : Void;
 }
 
-#if !display
-@:build(linc.Linc.touch())
-#end
 @:include('linc_box2d.h')
 @:native('::cpp::Reference<b2World>')
 extern class B2WorldRef extends B2World {}
