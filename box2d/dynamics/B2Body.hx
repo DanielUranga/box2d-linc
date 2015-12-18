@@ -29,19 +29,19 @@ extern class B2BodyDef {
 	var bullet : Bool;
 	var active : Bool;
 	var gravityScale : Float32;
-	@:native('b2BodyDef') public static function create () : B2BodyDef;
-	public inline function getPointer () : Pointer<B2BodyDef> return Pointer.addressOf(this);
+	@:native('b2BodyDef') static function create () : B2BodyDef;
+	inline function getPointer () : Pointer<B2BodyDef> return Pointer.addressOf(this);
 }
 
 @:build(linc.Linc.touch())
 @:include('linc_box2d.h')
 @:native('b2Body')
 extern class B2Body {
-	@:native('CreateFixture') public function createFixture (def : Pointer<B2Fixture.B2FixtureDef>) : B2Fixture.B2FixtureRef;
-	@:native('CreateFixture') public function createFixtureFromShape (shape : Pointer<B2Shape>, density : Float32) : B2Fixture.B2FixtureRef;
-	@:native('GetLocalCenter') public function getLocalCenter () : B2Vec2;
-	@:native('GetPosition') public function getPosition () : B2Vec2;
-	@:native('GetAngle') public function getAngle () : Float32;
+	@:native('CreateFixture') function createFixture (def : Pointer<B2Fixture.B2FixtureDef>) : B2Fixture.B2FixtureRef;
+	@:native('CreateFixture') function createFixtureFromShape (shape : Pointer<B2Shape>, density : Float32) : B2Fixture.B2FixtureRef;
+	@:native('GetLocalCenter') function getLocalCenter () : B2Vec2;
+	@:native('GetPosition') function getPosition () : B2Vec2;
+	@:native('GetAngle') function getAngle () : Float32;
 }
 
 @:build(linc.Linc.touch())

@@ -9,9 +9,9 @@ import cpp.Pointer;
 @:include('linc_box2d.h')
 @:native('b2Draw')
 extern class B2Draw {
-	@:native('SetFlags') public function setFlags (flags : Int) : Int;
-	@:native('GetFlags') public function getFlags () : Int;
-	@:native('AppendFlags') public function appendFlags (flags : Int) : Void;
+	@:native('SetFlags') function setFlags (flags : Int) : Int;
+	@:native('GetFlags') function getFlags () : Int;
+	@:native('AppendFlags') function appendFlags (flags : Int) : Void;
 }
 
 @:build(linc.Linc.touch())

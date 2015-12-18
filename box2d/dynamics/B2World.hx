@@ -13,13 +13,13 @@ import cpp.Pointer;
 @:include('linc_box2d.h')
 @:native('b2World')
 extern class B2World {
-	@:native('CreateBody') public function createBody (def : Pointer<B2BodyDef>) : B2BodyRef;
-	@:native('DrawDebugData') public function drawDebugData () : Void;
-	@:native('GetGravity') public function getGravity () : B2Vec2;
-	@:native('new b2World') public static function create (gravity : B2Vec2) : B2WorldRef;
-	@:native('SetDebugDraw') public function setDebugDraw (debugDraw : box2d.common.B2Draw.B2DrawRef) : Void;
-	@:native('Step') public function step (timeStep : Float32, velocityIterations : Int, positionIterations : Int) : Void;
-	@:native('~b2World') public function delete () : Void;
+	@:native('CreateBody') function createBody (def : Pointer<B2BodyDef>) : B2BodyRef;
+	@:native('DrawDebugData') function drawDebugData () : Void;
+	@:native('GetGravity') function getGravity () : B2Vec2;
+	@:native('new b2World') static function create (gravity : B2Vec2) : B2WorldRef;
+	@:native('SetDebugDraw') function setDebugDraw (debugDraw : box2d.common.B2Draw.B2DrawRef) : Void;
+	@:native('Step') function step (timeStep : Float32, velocityIterations : Int, positionIterations : Int) : Void;
+	@:native('~b2World') function delete () : Void;
 }
 
 #if !display

@@ -14,8 +14,8 @@ extern class B2FixtureDef {
 	var restitution : Float32;
 	var density : Float32;
 	var isSensor : Bool;
-	@:native('b2FixtureDef') public static function create () : B2FixtureDef;
-	public inline function getReference () : Pointer<B2FixtureDef> {
+	@:native('b2FixtureDef') static function create () : B2FixtureDef;
+	inline function getReference () : Pointer<B2FixtureDef> {
 		return Pointer.addressOf(this);
 	}
 }
