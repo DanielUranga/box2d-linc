@@ -21,11 +21,12 @@
 package box2d.common;
 
 import box2d.common.math.B2Transform.B2TransformRef;
-import box2d.common.math.B2Vec2;
 import box2d.common.math.B2Vec2.B2Vec2Ref;
+import box2d.common.math.B2Vec2;
 import cpp.Float32;
+import cpp.Function;
 import cpp.Pointer;
-
+import cpp.vm.Gc;
 import flash.display.Sprite;
 
 /**
@@ -49,7 +50,9 @@ class B2DebugDraw extends Sprite {
 		nativeRef = untyped __cpp__("new B2DebugDrawNative(this)");
 	}
 
-	//virtual ~b2DebugDraw() {}
+	public function destroy () {
+		untyped __cpp__("delete nativeRef");
+	}
 
 	//enum
 	//{
