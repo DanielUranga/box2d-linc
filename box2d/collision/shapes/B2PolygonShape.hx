@@ -14,6 +14,7 @@ extern class B2PolygonShape extends B2Shape {
 @:native('::cpp::Reference<b2PolygonShape>')
 extern class B2PolygonShapeRef extends B2PolygonShape {
 	public inline function getB2ShapeReference () : Pointer<B2Shape> {
-		return cast this;
+		var t = this;
+		return untyped __cpp__("((::cpp::Pointer< b2Shape >)((b2Shape*)t))");
 	}
 }
