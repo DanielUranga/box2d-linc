@@ -17,7 +17,7 @@ extern class B2World {
 	@:native('DrawDebugData') function drawDebugData () : Void;
 	@:native('GetGravity') function getGravity () : B2Vec2;
 	@:native('new b2World') static function create (gravity : B2Vec2) : B2WorldRef;
-	@:native('SetDebugDraw') function setDebugDraw (debugDraw : box2d.common.B2Draw.B2DrawRef) : Void;
+	@:native('SetDebugDraw') function setDebugDraw (debugDraw : B2DrawRef) : Void;
 	@:native('Step') function step (timeStep : Float32, velocityIterations : Int, positionIterations : Int) : Void;
 	@:native('~b2World') function delete () : Void;
 }

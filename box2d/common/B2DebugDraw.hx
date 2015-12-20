@@ -149,7 +149,6 @@ class B2DebugDraw extends Sprite {
 	* Draw a closed polygon provided in CCW order.
 	*/
 	public function drawPolygon (vertices : Pointer<B2Vec2>, vertexCount : Int, color : B2Color.B2ColorRef) : Void {
-		//trace("drawPolygon");
 		graphics.lineStyle(m_lineThickness, color.getColor(), m_alpha);
 		graphics.moveTo(vertices.at(0).x * m_drawScale, vertices.at(0).y * m_drawScale);
 		for (i in 1...vertexCount) {
@@ -162,7 +161,6 @@ class B2DebugDraw extends Sprite {
 	* Draw a solid closed polygon provided in CCW order.
 	*/
 	public function drawSolidPolygon (vertices : Pointer<B2Vec2>, vertexCount : Int, color : B2Color.B2ColorRef) : Void {
-		//trace("drawSolidPolygon " + Std.random(1000));
 		graphics.lineStyle(m_lineThickness, color.getColor(), m_alpha);
 		graphics.moveTo(vertices.at(0).x * m_drawScale, vertices.at(0).y * m_drawScale);
 		graphics.beginFill(color.getColor(), m_fillAlpha);

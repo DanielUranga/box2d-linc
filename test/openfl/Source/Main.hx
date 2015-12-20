@@ -11,15 +11,16 @@ import box2d.common.B2DebugDraw;
 import cpp.Float32;
 import flash.display.Sprite;
 import flash.events.Event;
+import flash.events.MouseEvent;
 import flash.Lib;
+import flash.text.TextField;
+import flash.text.TextFieldAutoSize;
+import flash.text.TextFormat;
 import openfl.display.Sprite;
 
 class Main extends Sprite {
 
 	var world : B2WorldRef;
-	var body : B2BodyRef;
-	var groundBody : B2BodyRef;
-
 	var debugDraw : B2DebugDraw;
 
 	public function new () {
@@ -37,22 +38,51 @@ class Main extends Sprite {
 		// Call the body factory which allocates memory for the ground body
 		// from a pool and creates the ground box shape (also from a pool).
 		// The body is also added to the world.
-		groundBody = world.createBody(groundBodyDef.getPointer());
+		var groundBody = world.createBody(groundBodyDef.getPointer());
 		// Define the ground box shape.
 		var groundBox = B2PolygonShape.create();
 
 		// The extents are the half-widths of the box.
-		groundBox.setAsBox(Lib.current.stage.stageWidth, 10.0);
+		groundBox.setAsBox(Lib.current.stage.stageWidth*2, 10.0);
 
 		// Add the ground fixture to the ground body.
 		groundBody.createFixtureFromShape(groundBox.getB2ShapeReference(), 0.0);
 
+		debugDraw = new B2DebugDraw();
+		debugDraw.setFlags(1);
+
+		addChild(debugDraw);
+
+		world.setDebugDraw(debugDraw.nativeRef);
+
+		this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
+		var fps = new openfl.display.FPS(10.0, 10.0, 0xff0000);
+		addChild(fps);
+
+		var text = new TextField();
+		var format = new TextFormat();
+		format.size = 20;
+		format.font = "Arial";
+		format.color = 0x558855;
+		text.autoSize = TextFieldAutoSize.LEFT;
+		text.selectable = false;
+		text.text = "Start clicking to add boxes.";
+		text.setTextFormat(format);
+		text.x = Lib.current.stage.stageWidth/2 - text.width/2;
+		text.y = Lib.current.stage.stageHeight/2 - text.height/2;
+		addChild(text);
+
+		Lib.current.stage.addEventListener(MouseEvent.CLICK, function (m : MouseEvent) addBox(m.stageX, m.stageY));
+
+	}
+
+	function addBox (x : Float, y : Float) {
 		// Define the dynamic body. We set its position and call the body factory.
 		var bodyDef = B2BodyDef.create();
 		bodyDef.type = B2BodyType.b2_dynamicBody();
-		bodyDef.position.set(100.0, 25.0);
-		bodyDef.angularVelocity = 20.0;
-		body = world.createBody(bodyDef.getPointer());
+		bodyDef.position.set(x, y);
+		bodyDef.angularVelocity = Math.random()*20.0-10.0;
+		var body = world.createBody(bodyDef.getPointer());
 
 		// Define another box shape for our dynamic body.
 		var dynamicBox = B2PolygonShape.create();
@@ -72,21 +102,6 @@ class Main extends Sprite {
 
 		// Add the shape to the body.
 		body.createFixture(fixtureDef.getReference());
-
-		debugDraw = new B2DebugDraw();
-		debugDraw.setFlags(1|2|4|8|10|20);
-
-		addChild(debugDraw);
-
-		world.setDebugDraw(debugDraw.nativeRef);
-
-		this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
-		var fps = new openfl.display.FPS(10.0, 10.0, 0xff0000);
-		addChild(fps);
-	}
-
-	static function formatFloat (f : Float32) : String {
-		return Std.string(Std.int(f*100) / 100);
 	}
 
 	function onEnterFrame (_) {
