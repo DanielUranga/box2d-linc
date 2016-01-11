@@ -51,6 +51,8 @@ class Main {
 		}
 
 		world.delete();
+		groundBox.delete();
+		dynamicBox.delete();
 
 	}
 
